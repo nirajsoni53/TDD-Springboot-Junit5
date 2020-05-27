@@ -46,18 +46,6 @@ class UserControllerTest {
     private ObjectMapper mapper = new ObjectMapper();
 
     @Test
-    @DisplayName("Hello World TEST")
-    void testHelloWorld() throws Exception {
-        String mockResponse = "Hello world 1";
-        doReturn(mockResponse).when(userService);
-
-        mockMvc.perform(
-                get("/user/helloWorld")
-                        .accept(mockResponse, "Hello world 1")
-        );
-    }
-
-    @Test
     @DisplayName("GET /getUser/1 - Found")
     void getUserById() throws Exception {
         User actualUser = new User(1, "NIRAJ", "DESC");

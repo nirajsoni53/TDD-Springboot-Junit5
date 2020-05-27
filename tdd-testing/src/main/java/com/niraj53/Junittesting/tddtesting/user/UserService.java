@@ -13,8 +13,6 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public String helloWorld() { return "Hello world"; }
-
     /**
      * Returns the user with the specified id.
      *

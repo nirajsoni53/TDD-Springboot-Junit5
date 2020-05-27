@@ -19,11 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/helloWorld")
-    public String helloWorld() {
-        return userService.helloWorld();
-    }
-
     @GetMapping("/findById/{userId}")
     public ResponseEntity<User> findById(@PathVariable("userId") int userId) {
         return userService
